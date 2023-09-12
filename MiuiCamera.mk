@@ -4,9 +4,6 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-# Build rules
-BUILD_BROKEN_DUP_RULES := true
-
 # Dexpreopt
 PRODUCT_DEXPREOPT_SPEED_APPS += \
     MiuiCamera \
