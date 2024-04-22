@@ -26,6 +26,10 @@ PRODUCT_SYSTEM_EXT_PROPERTIES += \
     ro.product.mod_device=_global \
     vendor.camera.aux.packagelist=com.android.camera
 
+# Shims
+PRODUCT_PACKAGES += \
+    libgui_shim_miuicamera
+
 # Soong
 PRODUCT_SOONG_NAMESPACES += \
     vendor/xiaomi/miuicamera
