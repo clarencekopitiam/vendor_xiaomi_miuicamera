@@ -20,7 +20,9 @@ android_app_import {
     privileged: true,
     system_ext_specific: true,
     required: [
+        "miuicamera-hiddenapi-package-allowlist.xml",
         "privapp-permissions-miuicamera.xml",
+        "privapp-permissions-miuiextraphoto.xml",
     ],
     optional_uses_libs: [
         "libSNPE.so",
@@ -59,4 +61,18 @@ prebuilt_etc {
     system_ext_specific: true,
     src: "permissions/privapp-permissions-miuicamera.xml",
     sub_dir: "permissions",
+}
+
+prebuilt_etc {
+    name: "privapp-permissions-miuiextraphoto.xml",
+    system_ext_specific: true,
+    src: "permissions/privapp-permissions-miuiextraphoto.xml",
+    sub_dir: "permissions",
+}
+
+prebuilt_etc {
+    name: "miuicamera-hiddenapi-package-allowlist.xml",
+    system_ext_specific: true,
+    src: "sysconfig/miuicamera-hiddenapi-package-allowlist.xml",
+    sub_dir: "sysconfig",
 }
