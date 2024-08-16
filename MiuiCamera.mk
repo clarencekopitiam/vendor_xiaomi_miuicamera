@@ -13,10 +13,19 @@ PRODUCT_DEXPREOPT_SPEED_APPS += \
     MiuiCamera \
     MiuiExtraPhoto
 
+# HIDL
+PRODUCT_PACKAGES += \
+    android.hidl.base@1.0 \
+    android.hidl.base@1.0.vendor \
+    android.hidl.memory.block@1.0 \
+    android.hidl.memory.block@1.0.vendor
+
 # Properties
 TARGET_SYSTEM_EXT_PROP += vendor/xiaomi/miuicamera/system_ext.prop
 
 # Sepolicy
+SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += vendor/xiaomi/miuicamera/sepolicy/private
+SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += vendor/xiaomi/miuicamera/sepolicy/public
 BOARD_VENDOR_SEPOLICY_DIRS += vendor/xiaomi/miuicamera/sepolicy/vendor
 
 # Shims
