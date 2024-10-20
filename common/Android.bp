@@ -1,0 +1,157 @@
+//
+// Copyright (C) 2023-2024 The LineageOS Project
+//
+// SPDX-License-Identifier: Apache-2.0
+//
+
+soong_namespace {
+	imports: [
+	],
+}
+
+android_app_import {
+    name: "MiuiCamera",
+	owner: "xiaomi",
+    apk: "proprietary/system_ext/priv-app/MiuiCamera/MiuiCamera.apk",
+    overrides: [
+        "Aperture",
+        "Camera2",
+        "GoogleCamera",
+        "GoogleCameraGo",
+    ],
+    certificate: "platform",
+    privileged: true,
+    system_ext_specific: true,
+    required: [
+        "miuicamera-hiddenapi-package-allowlist.xml",
+        "privapp-permissions-miuicamera.xml",
+        "privapp-permissions-miuiextraphoto.xml",
+    ],
+    optional_uses_libs: [
+        "libSNPE.so",
+        "libOpenCL.so",
+        "libcdsprpc.so",
+        "libmialgo_ai_vision.so",
+        "libxmi_slow_motion_mein.so",
+        "libmialgo_utils.so",
+        "libmiocr.so",
+        "libcamera_ispinterface_jni.xiaomi.so",
+        "libcamera_algoup_jni.xiaomi.so",
+        "libcamera_imagecodec_jni.xiaomi.so",
+        "libcamera_jpegutil_jni.xiaomi.so",
+        "libneuron_adapter_mgvi.so",
+        "libneuron_adapter.so",
+        "libneuronusdk_adapter.mtk.so",
+    ],
+}
+
+android_app_import {
+    name: "MiuiExtraPhoto",
+	owner: "xiaomi",
+    apk: "proprietary/system_ext/priv-app/MiuiExtraPhoto/MiuiExtraPhoto.apk",
+    certificate: "media",
+    privileged: true,
+    system_ext_specific: true,
+    uses_libs: ["org.apache.http.legacy"],
+}
+
+prebuilt_etc_xml {
+    name: "privapp-permissions-miuicamera.xml",
+	owner: "xiaomi",
+    system_ext_specific: true,
+    src: "proprietary/system_ext/permissions/privapp-permissions-miuicamera.xml",
+    sub_dir: "permissions",
+}
+
+prebuilt_etc_xml {
+    name: "privapp-permissions-miuiextraphoto.xml",
+	owner: "xiaomi",
+    system_ext_specific: true,
+    src: "proprietary/system_ext/permissions/privapp-permissions-miuiextraphoto.xml",
+    sub_dir: "permissions",
+}
+
+prebuilt_etc_xml {
+    name: "miuicamera-hiddenapi-package-allowlist.xml",
+	owner: "xiaomi",
+    system_ext_specific: true,
+    src: "proprietary/system_ext/sysconfig/miuicamera-hiddenapi-package-allowlist.xml",
+    sub_dir: "sysconfig",
+}
+
+install_symlink {
+	name: "libcamera_algoup_jni.xiaomi_libcamera_algoup_jni.xiaomi_symlink64",
+    system_ext_specific: true,
+	installed_location: "priv-app/MiuiCamera/lib/arm64/libcamera_algoup_jni.xiaomi.so",
+	symlink_target: "/system_ext/lib64/libcamera_algoup_jni.xiaomi.so",
+}
+
+install_symlink {
+	name: "libcamera_mianode_jni.xiaomi_libcamera_mianode_jni.xiaomi_symlink64",
+    system_ext_specific: true,
+	installed_location: "priv-app/MiuiCamera/lib/arm64/libcamera_mianode_jni.xiaomi.so",
+	symlink_target: "/system_ext/lib64/libcamera_mianode_jni.xiaomi.so",
+}
+
+install_symlink {
+	name: "libdoc_photo_libdoc_photo_symlink64",
+    system_ext_specific: true,
+	installed_location: "priv-app/MiuiExtraPhoto/lib/arm64/libdoc_photo.so",
+	symlink_target: "/system_ext/lib64/libdoc_photo.so",
+}
+
+install_symlink {
+	name: "libdoc_photo_c++_shared_libdoc_photo_c++_shared_symlink64",
+    system_ext_specific: true,
+	installed_location: "priv-app/MiuiExtraPhoto/lib/arm64/libdoc_photo_c++_shared.so",
+	symlink_target: "/system_ext/lib64/libdoc_photo_c++_shared.so",
+}
+
+install_symlink {
+	name: "libgallery_arcsoft_dualcam_refocus_libgallery_arcsoft_dualcam_refocus_symlink64",
+    system_ext_specific: true,
+	installed_location: "priv-app/MiuiExtraPhoto/lib/arm64/libgallery_arcsoft_dualcam_refocus.so",
+	symlink_target: "/system_ext/lib64/libgallery_arcsoft_dualcam_refocus.so",
+}
+
+install_symlink {
+	name: "libgallery_arcsoft_portrait_lighting_libgallery_arcsoft_portrait_lighting_symlink64",
+    system_ext_specific: true,
+	installed_location: "priv-app/MiuiExtraPhoto/lib/arm64/libgallery_arcsoft_portrait_lighting.so",
+	symlink_target: "/system_ext/lib64/libgallery_arcsoft_portrait_lighting.so",
+}
+
+install_symlink {
+	name: "libgallery_arcsoft_portrait_lighting_c_libgallery_arcsoft_portrait_lighting_c_symlink64",
+    system_ext_specific: true,
+	installed_location: "priv-app/MiuiExtraPhoto/lib/arm64/libgallery_arcsoft_portrait_lighting_c.so",
+	symlink_target: "/system_ext/lib64/libgallery_arcsoft_portrait_lighting_c.so",
+}
+
+install_symlink {
+	name: "libgallery_mpbase_libgallery_mpbase_symlink64",
+    system_ext_specific: true,
+	installed_location: "priv-app/MiuiExtraPhoto/lib/arm64/libgallery_mpbase.so",
+	symlink_target: "/system_ext/lib64/libgallery_mpbase.so",
+}
+
+install_symlink {
+	name: "libmibokeh_gallery_libmibokeh_gallery_symlink64",
+    system_ext_specific: true,
+	installed_location: "priv-app/MiuiExtraPhoto/lib/arm64/libmibokeh_gallery.so",
+	symlink_target: "/system_ext/lib64/libmibokeh_gallery.so",
+}
+
+install_symlink {
+	name: "librefocus_librefocus_symlink64",
+    system_ext_specific: true,
+	installed_location: "priv-app/MiuiExtraPhoto/lib/arm64/librefocus.so",
+	symlink_target: "/system_ext/lib64/librefocus.so",
+}
+
+install_symlink {
+	name: "librefocus_mibokeh_librefocus_mibokeh_symlink64",
+    system_ext_specific: true,
+	installed_location: "priv-app/MiuiExtraPhoto/lib/arm64/librefocus_mibokeh.so",
+	symlink_target: "/system_ext/lib64/librefocus_mibokeh.so",
+}

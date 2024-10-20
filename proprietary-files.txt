@@ -1,0 +1,16 @@
+# MiuiCamera
+system_ext/lib64/libcamera_algoup_jni.xiaomi.so;SYMLINK=system_ext/priv-app/MiuiCamera/lib/arm64/libcamera_algoup_jni.xiaomi.so
+system_ext/lib64/libcamera_mianode_jni.xiaomi.so;SYMLINK=system_ext/priv-app/MiuiCamera/lib/arm64/libcamera_mianode_jni.xiaomi.so
+system_ext/priv-app/MiuiCamera/MiuiCamera.apk;OVERRIDES=Aperture,Camera2,GoogleCamera,GoogleCameraGo
+
+# MiuiExtraPhoto
+system_ext/lib64/libdoc_photo.so;SYMLINK=system_ext/priv-app/MiuiExtraPhoto/lib/arm64/libdoc_photo.so
+system_ext/lib64/libdoc_photo_c++_shared.so;SYMLINK=system_ext/priv-app/MiuiExtraPhoto/lib/arm64/libdoc_photo_c++_shared.so
+system_ext/lib64/libgallery_arcsoft_dualcam_refocus.so;SYMLINK=system_ext/priv-app/MiuiExtraPhoto/lib/arm64/libgallery_arcsoft_dualcam_refocus.so
+system_ext/lib64/libgallery_arcsoft_portrait_lighting.so;SYMLINK=system_ext/priv-app/MiuiExtraPhoto/lib/arm64/libgallery_arcsoft_portrait_lighting.so
+system_ext/lib64/libgallery_arcsoft_portrait_lighting_c.so;SYMLINK=system_ext/priv-app/MiuiExtraPhoto/lib/arm64/libgallery_arcsoft_portrait_lighting_c.so
+system_ext/lib64/libgallery_mpbase.so;SYMLINK=system_ext/priv-app/MiuiExtraPhoto/lib/arm64/libgallery_mpbase.so
+system_ext/lib64/libmibokeh_gallery.so;SYMLINK=system_ext/priv-app/MiuiExtraPhoto/lib/arm64/libmibokeh_gallery.so
+system_ext/lib64/librefocus.so;SYMLINK=system_ext/priv-app/MiuiExtraPhoto/lib/arm64/librefocus.so
+system_ext/lib64/librefocus_mibokeh.so;SYMLINK=system_ext/priv-app/MiuiExtraPhoto/lib/arm64/librefocus_mibokeh.so
+system_ext/priv-app/MiuiExtraPhoto/MiuiExtraPhoto.apk
