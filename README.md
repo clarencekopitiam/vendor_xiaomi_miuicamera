@@ -5,10 +5,6 @@ Clone to `vendor/xiaomi/miuicamera` and add these lines in your device tree :
 ```
 $(call inherit-product-if-exists, vendor/xiaomi/miuicamera/MiuiCamera.mk)
 ```
-- In BoardConfig.mk:
-```
--include vendor/xiaomi/miuicamera/BoardConfigMiuiCamera.mk
-```
 - In device FCM:
 ```
 <hal format="hidl" optional="true">

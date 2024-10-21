@@ -22,3 +22,6 @@ PRODUCT_PACKAGES += \
 # Sysconfig
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/miuicamera-hiddenapi-package-allowlist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/miuicamera-hiddenapi-package-allowlist.xml
+
+# Inherit from BoardConfigMiuiCamera
+include vendor/xiaomi/miuicamera/BoardConfigMiuiCamera.mk
